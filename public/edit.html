@@ -20,8 +20,12 @@
 			<div class="card-img-overlay position-relative container">
 				<div class="row">
 					<div class="col-sm text-center">
-						<h1 class="title pt-5 pb-0">이곳은 제목이 위치합니다. 개행문자는 적용이 안됩니다.</h1>
-						<h5 class="subtitle pt-1 pb-5">0000.00.00 - writer</h5>
+						<h1 class="title pt-5 pb-0">
+							<input placeholder="Title" />
+						</h1>
+						<h5 class="subtitle pt-1 pb-5">
+							<input />
+						</h5>
 					</div>
 				</div>
 			</div>
@@ -29,35 +33,46 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<img class="mt-5 w-100" src="./lib/img/close-up-black-marble-textured-background.jpg" />
+					<div class="input-group mb-3">
+						<input type="text" class="form-control"	placeholder="image url path" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
 
 					<div class="pt-5 content">
-						2020년 현재, 우리나라의 우주개발 주무부처는 '과학기술정보통신부'입니다.
+						<textarea></textarea>
 					</div>
 
 					<dl class="pl-0 pt-5 pb-3 files">
 						<dl class="mb-0">
-							<a href="">link title or file name</a>
+							<input placeholder="link path" /><input placeholder="link title" />
 						</dl>
 						<dl class="mb-0">
-							<a href="">link title or file name</a>
+							<input placeholder="link path" /><input placeholder="link title" />
 						</dl>
 						<dl class="mb-0">
-							<a href="">link title or file name</a>
+							<input placeholder="link path" /><input placeholder="link title" />
+						</dl>
+						<dl class="mb-0">
+							<input placeholder="link path" /><input placeholder="link title" />
+						</dl>
+						<dl class="mb-0">
+							<input placeholder="link path" /><input placeholder="link title" />
 						</dl>
 					</dl>
 
 					<div class="pt-5 pb-0history-title">내역 안내 문구</div>
 					<dl class="pl-0 pt-0 pb-4 history">
 						<dl class="mb-0">
-							<span class="year">0000 - 0000</span>
-							어디어디어디 출처
+							<input placeholder="history date" /><input placeholder="history name" />
 						</dl>
 						<dl class="mb-0">
-							<span class="year">0000</span>
-							어디어디어디 출처
+							<input placeholder="history date" /><input placeholder="history name" />
 						</dl>
 					</dl>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button type="button" class="btn btn-primary">Save</button>
 				</div>
 			</div>
 		</div>
