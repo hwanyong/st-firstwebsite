@@ -10,8 +10,9 @@
       "**/.*",
       "**/node_modules/**"
     ],
-	"rewrites": [{
-		"source": "/", "function": "helloWorld"
-	}]
+	"rewrites": [
+		{ "source": "/", "function": "helloWorld" },
+		{ "source": "/admin", "function": "helloWorld" }
+	]
   }
 }

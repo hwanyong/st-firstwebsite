@@ -1,0 +1,11 @@
+My favorite template engine is <%= it.favorite %><br />
+<%
+	console.log(it);
+	if (it.isAuth) {
+%>
+	<span style="display:none">because it is: <%= it.reasons[0] %></span>
+<%
+	}
+%>
+
+<%~ includeFile('./footer', it) %>
