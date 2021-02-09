@@ -1,0 +1,32 @@
+<dl>
+</dl>
+
+<script id="tem" type="text/html">
+	<dt>@{title}</dt>
+	<dd>@{date}</dd>
+</script>
+
+<script type="text/javascript">
+	const datas = [{ date: "2021-01-01", title: "new year" },{ date: "2021-05-17", title: "birthday" },{ date: "2021-12-31", title: "Christmas" }];
+
+	datas.forEach(function (e, idx) {
+		console.log(
+			e.date,
+			e.title
+		);
+		console.log(e);
+		
+		// const tem = `<dt>@{title}</dt><dd>@{date}</dd>`;
+		const tem = document.querySelector("#tem").innerText;
+
+		// querySelect
+		let node = document.querySelector('dl');
+		console.log(node);
+		// innerHTML += "-----"
+		// node.innerHTML += "<dt>" + e.title + "</dt><dd>" + e.date + "</dd>";
+		// node.innerHTML += `<dt>${e.title}</dt><dd>${e.date}</dd>`;
+			node.innerHTML += tem
+				.replaceAll("@{title}", e.title)
+				.replaceAll("@{date}", e.date);
+	});
+</script>

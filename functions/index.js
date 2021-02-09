@@ -7,10 +7,19 @@ WebServer.engine("eta", Eta.renderFile);
 WebServer.set("view engine", "eta");
 WebServer.set("views", "./views");
 
+var myLogger = function (req, res, next) {
+	// Callback ()
+	req.isAuth = false;
+
+	console.log('LOGGED');
+	next();
+}
+
+WebServer.use(myLogger);
+
 WebServer.get('/', (req, res) => {
-	//Functions.logger.info("Hello logs!", {structuredData: true});
 	console.log('Call GET /');
-	// res.send("Hello from Firebase!");
+	console.log(req.newproperty);
 
 	res.render("template",
 		{
@@ -24,7 +33,6 @@ WebServer.get('/', (req, res) => {
 });
 
 WebServer.get('/admin', (req, res) => {
-	//Functions.logger.info("Hello logs!", {structuredData: true});
 	console.log('Call GET /');
 	res.send("Hello from Admin!");
 });
